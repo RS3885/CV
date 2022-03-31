@@ -48,32 +48,51 @@ height: max-content;
 
 
   }
-
+/*
   .body2 {
     display: flex;
   }
+*/
 
 div {
-
   word-wrap: break-word;
 }
 
-
+/*
   * {
-    box-sizing: content-box;
+    box-sizing:content-box;
   }
-  
+  */
+
   .row {
     display: flex;
-    flex: 1;
+    /*flex: 1;*/
     align-items: stretch;
   }
   
+  
+  @media only screen and (max-width: 600px) {
+    
+    .row{
+      flex-direction: column;
+    }
+    /*
+    .column1 {
+      width:100%;
+      max-width:fit-content;
+    }
+    */
+    
+  }
+  
+  
+
+
   /* Create two columns that sit next to each other */
   .column1 {
     /*flex: 25%,100%;*/
     padding: 10px;
-    max-width:15%;
+    max-width:fit-content;
    /* max-width:min-content;
     /*flex-wrap:nowrap;
     flex-basis: 100%;
@@ -85,13 +104,14 @@ div {
   .column2 {
     flex:50%;
     padding: 10px;
-    max-width:15%;
+    max-width:fit-content;
   }
 
   .column3 {
     flex:100%;
     padding: 10px;
     max-height: 100%;
+    /*max-width:fit-content;
    /* display: flex;
   flex-direction: column;
   flex-basis: 100%;
